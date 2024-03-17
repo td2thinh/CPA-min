@@ -11,7 +11,9 @@ def naiveAlgorithm(inputPoints: List["Point"]) -> "Circle":
     points = inputPoints.copy()
     if len(points) < 1:
         return None
-    cX, cY, cRadiusSquared = None
+    cX = None
+    cY = None
+    cRadiusSquared = None
     for p in points:
         for q in points:
             cX = 0.5 * (p.x + q.x)

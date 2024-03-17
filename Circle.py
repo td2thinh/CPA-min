@@ -3,8 +3,11 @@ from typing import List
 
 
 class Circle:
-    def __init__(self, center: "Point", radius: float) -> "Circle":
-        self.center = center
+    def __init__(self, center: "Point", radius: float):
+        if isinstance(center, tuple):
+            self.center = Point(*center)
+        else:
+            self.center = center
         self.radius = radius
 
     def __str__(self) -> str:
